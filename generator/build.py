@@ -184,7 +184,7 @@ def home():
 <section class="hero" aria-labelledby="h-h"><div class="dapple" aria-hidden="true"><i></i><i></i><i></i><i></i></div>{leaves()}
 <div class="bigtype" aria-hidden="true">TIMBER</div>
 <div class="wrap hero-in"><div class="h-copy">
-<span class="eyebrow light">Tree service · Belleview &amp; Summerfield, FL</span>
+<span class="eyebrow light">Tree service · <span style="white-space:nowrap">Belleview &amp; Summerfield, FL</span></span>
 <h1 class="h1 split" id="h-h"><span class="ln"><span>From the crown</span></span><span class="ln"><span>down to the <em>stump.</em></span></span></h1>
 <p class="lede">Tree removal, trimming, stump grinding, storm cleanup and landscaping across Marion County, Sumter County, Lady Lake and The Villages. {TAGLINE.replace('. ','.&nbsp;')}</p>
 <div class="cta-row"><a class="btn wood xl mag" href="tel:{TEL}">{ic('phone')}Free estimate: {PHONE}</a><a class="btn ghost xl" href="sms:{TEL}">{ic('msg')}Text us</a></div>
