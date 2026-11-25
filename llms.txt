@@ -1,0 +1,29 @@
+# Florida State Tree & Landscaping LLC
+> Licensed and insured tree service based in Belleview, Florida (Summerfield area), led by Harley Roth. Tree removal, trimming, stump grinding, storm cleanup and emergency tree work, tree assessments and landscaping. Free estimates. Rated 5.0/5 from 22 Google reviews. Listed on Google as open 24 hours.
+
+- Phone (call or text): (352) 857-9472 (main). Facebook also lists (352) 454-9841.
+- Address: 4874 SE 112 St Rd, Belleview, FL 34420
+- Hours: Open 24 hours, 7 days (per Google Business Profile)
+- Service area: Marion County, Sumter County, Lady Lake, The Villages and surrounding areas
+- Licensed & insured. Free estimates. References available upon request.
+- Tagline: "Quality Work. Honest Service. Beautiful Results."
+- Storm work: after a hurricane the crew traveled to Navarre, FL to cut hazardous trees, remove fallen trees and haul damaged fencing.
+- Email / website: none published.
+
+## Services
+- Tree Removal: From big pines to palms, we take trees down safely in controlled sections, using an aerial lift where the job calls for it, and haul the wood and brush away.
+- Tree Trimming & Pruning: Branches hanging over the house, garage or lanai come off carefully, and the rest of the tree gets pruned to look right. Customers mention we even blow the debris off the roof and gutters.
+- Stump Grinding: Once a tree is down, the stump grinder chews the stump below grade so you can replant, lay sod or just mow over it.
+- Storm Cleanup & Emergency Tree Work: After a hurricane we cut hazardous trees, remove fallen ones and haul away damaged debris. We’ve traveled as far as Navarre, Florida to help homeowners after a storm.
+- Tree Assessments: We’ll look at the tree with you, talk through trimming versus removal, and give you an honest free estimate. One customer said we even gave ideas on what to plant in place of the trees.
+- Landscaping: Full landscaping to finish the job: fresh sod, planting beds, rock borders and palm care, so the yard looks better than before the trees came down.
+
+## Pages
+- [Home](https://rgwebd.github.io/floridastatetree-demo/): overview, why choose us, services, storm work, reviews
+- [Services](https://rgwebd.github.io/floridastatetree-demo/services.html): each service and how a job works
+- [Our Work](https://rgwebd.github.io/floridastatetree-demo/work.html): photo gallery of real jobs
+- [About](https://rgwebd.github.io/floridastatetree-demo/about.html): Harley Roth and the crew, Navarre storm trip, service area
+- [Reviews](https://rgwebd.github.io/floridastatetree-demo/reviews.html): Google reviews quoted word for word
+- [Contact](https://rgwebd.github.io/floridastatetree-demo/contact.html): phone, text form, hours, address, FAQ
+- [Google listing](https://www.google.com/maps/place/Florida+State+Tree+%26+Landscaping+LLC/@29.0453038,-82.0679205,17z/data=!4m6!3m5!1s0xfcb74f72141208b:0x3787b57b5eda292d)
+- [Facebook](https://www.facebook.com/p/Florida-State-Tree-Landscaping-LLC-100083582852027/)
