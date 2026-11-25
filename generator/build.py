@@ -124,9 +124,9 @@ def footer():
 <p class="foot-big">Call or text for a <em>free estimate.</em><a href="tel:{TEL}">{PHONE}</a></p></div>
 <div class="foot-grid">
 <div><h3>Pages</h3><ul>{links}</ul></div>
-<div><h3>Visit / mail</h3><address>{LEGAL}<br>{STREET}<br>{CITY}, {REGION} {ZIP}</address><p><a href="{MAPS}" rel="noopener" target="_blank">Open in Google Maps</a></p></div>
+<div><h3>Address</h3><address>{LEGAL}<br>{STREET}<br>{CITY}, {REGION} {ZIP}</address><p><a href="{MAPS}" rel="noopener" target="_blank">Open in Google Maps</a></p></div>
 <div><h3>Call or text</h3><p><a href="tel:{TEL}">{PHONE}</a><br><span class="muted">Also listed: <a href="tel:{TEL2}">{PHONE2}</a></span></p><p>{badge('sm')}</p><p class="muted">Hours: open 24 hours, 7 days (per Google)</p></div>
-<div><h3>Service area</h3><p>{' · '.join(AREAS)} &amp; surrounding areas</p><p class="soc"><a href="{FB}" rel="noopener" target="_blank" aria-label="Facebook">{ic('fb')}</a><a href="{MAPS}" rel="noopener" target="_blank" aria-label="Google reviews">{ic('g')}</a></p></div>
+<div><h3>Service area</h3><p>{' · '.join(AREAS)} &amp; surrounding areas</p><p class="soc"><a href="{FB}" rel="noopener" target="_blank" aria-label="Facebook">{ic('fb')}</a><a href="{MAPS}" rel="noopener" target="_blank" aria-label="Google reviews">{ic('star')}</a></p></div>
 </div>
 <div class="foot-bot"><span>&copy; 2026 {e(LEGAL)} · Licensed &amp; insured</span><span>{e(TAGLINE)}</span></div></div></footer>
 <div class="mbar"><a href="tel:{TEL}" class="mb-call">{ic('phone')}Call now</a><a href="sms:{TEL}" class="mb-text">{ic('msg')}Text us</a></div>
@@ -215,7 +215,7 @@ def home():
 <div class="cta-row rv d2"><a class="btn wood mag" href="tel:{TEL}">{ic('phone')}Storm damage? Call {PHONE}</a></div></div></div></section>
 
 <section class="sec revs" aria-labelledby="rv-h"><div class="wrap"><div class="sec-head"><div><span class="eyebrow rv">{RATING} stars · {REVIEWS} Google reviews</span><h2 class="h2 split" id="rv-h"><span class="ln"><span>Neighbors say it <em>best.</em></span></span></h2></div><a class="btn line rv" href="reviews.html">Read the reviews {ic('arrow')}</a></div>
-<div class="car rv" data-car><div class="car-track">{slides}</div><div class="car-ctl"><button class="car-b prev" aria-label="Previous review">{ic('left')}</button><div class="car-dots"></div><button class="car-b next" aria-label="Next review">{ic('arrow')}</button></div></div></div></section>
+<div class="rv-wrap"><div class="rv-score rv">{rings_svg(8,120,'rings-mini',seed=31)}<div><b data-to="5.0" data-dec="1">0</b>{STAR5}</div><p>Average from {REVIEWS} Google reviews. Customers keep mentioning careful trimming, fair pricing and spotless cleanup.</p><a href="{MAPS}" rel="noopener" target="_blank">See them on Google →</a></div><div class="car rv" data-car><div class="car-track">{slides}</div><div class="car-ctl"><button class="car-b prev" aria-label="Previous review">{ic('left')}</button><div class="car-dots"></div><button class="car-b next" aria-label="Next review">{ic('arrow')}</button></div></div></div></div></section>
 
 <section class="sec railsec" aria-labelledby="rl-h"><div class="wrap sec-head"><div><span class="eyebrow rv">Out on the job</span><h2 class="h2 split" id="rl-h"><span class="ln"><span>Drag through a few <em>jobs.</em></span></span></h2></div><a class="btn line rv" href="work.html">See all our work {ic('arrow')}</a></div>
 <div class="rail" tabindex="0" aria-label="Job photos, scroll or drag sideways"><div class="rail-t">{rail}</div></div>
@@ -253,7 +253,7 @@ def work():
     p='work.html'
     title=f'Our Work: Tree Removal, Trimming & Landscaping Photos | {NAME}'
     desc='Photos from real Florida State Tree & Landscaping jobs: big removals with the aerial lift, trimming over homes, stump grinding, sod and landscaping.'
-    order=['g02','f16','f05','f01','f11','f10','f08','f12','f03','f15','f13','f09','g01','f04']
+    order=['g02','f16','f05','f01','f11','f10','f08','f12','f03','f13','f09','g01','f04']  # f15 is the page hero
     filt=[('all','All'),('removal','Removal'),('trimming','Trimming'),('stumps','Stumps'),('landscape','Landscaping')]
     fb=''.join(f'<button class="fbtn" data-f="{a}" aria-pressed="{"true" if a=="all" else "false"}">{b}</button>' for a,b in filt)
     items=''.join(f'<figure class="gi rv" data-tag="{CAP[k][1]}"><button class="gi-b" data-full="img/{k}.webp" data-cap="{e(CAP[k][0])}" aria-label="Open photo: {e(CAP[k][0])}">{img(k,CAP[k][0],small=True)}</button><figcaption>{CAP[k][0]}</figcaption></figure>' for k in order)
@@ -280,11 +280,11 @@ def about():
 <div class="story-art"><figure class="st-a1 rv">{img('f04','Aerial lift raised into a large live oak with Spanish moss beside a home',small=True)}</figure><figure class="st-a2 rv d1">{img('f11','Front yard with planting beds, palms and large shade trees',small=True)}</figure></div></div></section>
 <section class="sec vals-sec" aria-label="Our values"><div class="wrap vals">{vh}</div></section>
 <section class="storm" aria-labelledby="nv-h"><div class="rain" aria-hidden="true"></div><div class="flash" aria-hidden="true"></div><div class="wrap storm-in">
-<figure class="st-photo rv">{img('f16','Aerial lift and tractor working on a tall trunk being taken down in sections',sizes="(max-width:860px) 100vw, 42vw")}</figure>
+<figure class="st-photo rv">{img('f16','Aerial lift and tractor working on a tall trunk being taken down in sections',sizes="(max-width:860px) 100vw, 42vw")}<figcaption>A big removal from our Facebook photos</figcaption></figure>
 <div class="st-copy"><span class="eyebrow light rv">Navarre, FL</span><h2 class="h2 split" id="nv-h"><span class="ln"><span>We went where</span></span><span class="ln"><span>help was <em>needed.</em></span></span></h2>
 <p class="lede rv">After the hurricane, we traveled to Navarre, Florida to help homeowners recover: cutting hazardous trees, removing fallen trees and hauling away damaged fencing, all while keeping our prices fair. As we put it on Facebook: \u201cThis is why we do what we do!\u201d</p></div></div></section>
 <section class="sec area" aria-labelledby="ar-h"><div class="wrap area-in"><div><span class="eyebrow rv">Service area</span><h2 class="h2 split" id="ar-h"><span class="ln"><span>Where we <em>work.</em></span></span></h2><p class="lede rv">Based at {ADDR}, near Summerfield. We serve:</p><ul class="areas">{areas}</ul></div>
-<div class="map rv"><iframe title="Map of {e(NAME)} in Belleview, FL" src="https://www.google.com/maps?q={STREET.replace(' ','+')},+{CITY},+{REGION}+{ZIP}&amp;output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div></div></section>
+<div class="map rv"><iframe title="Map of {e(NAME)} in Belleview, FL" src="https://maps.google.com/maps?q={STREET.replace(' ','+')},+{CITY},+{REGION}+{ZIP}&amp;z=12&amp;output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div></div></section>
 {cta_band()}
 </main>{footer()}'''
     return body
@@ -301,7 +301,7 @@ def reviews():
     body=f'''{head(p,title,desc,crumbs(p,'Reviews'))}<body>{nav(p)}<main id="main">
 {page_hero(f'{RATING} stars · {REVIEWS} Google reviews',['Don\u2019t take','<em>our word</em> for it.'],'Here are reviews quoted word for word from our Google listing. Every review shown is five stars.','f09','A full, leafy shade tree in a front yard in summer','Reviews','50% 35%')}
 <section class="sec rscore" aria-label="Rating summary"><div class="wrap rs-in"><div class="big-score rv"><span class="bs-n" data-to="5.0" data-dec="1">0</span>{STAR5}<p>{REVIEWS} reviews on Google</p></div>
-<div class="rs-side rv d1"><h2 class="h3">What reviewers bring up most</h2><ul class="chips">{''.join(f'<li>{a}<b>{b}</b></li>' for a,b in [('Trimming',8),('Pricing',6),('Stump',5),('Palm trees',4),('Sod',2),('Cleanliness',2)])}</ul><p class="muted">Topic counts as shown on Google.</p><a class="btn line" href="{MAPS}" rel="noopener" target="_blank">{ic('g')}See all reviews on Google</a></div></div></section>
+<div class="rs-side rv d1"><h2 class="h3">What reviewers bring up most</h2><ul class="chips">{''.join(f'<li>{a}<b>{b}</b></li>' for a,b in [('Trimming',8),('Pricing',6),('Stump',5),('Palm trees',4),('Sod',2),('Cleanliness',2)])}</ul><p class="muted">Topic counts as shown on Google.</p><a class="btn line" href="{MAPS}" rel="noopener" target="_blank">{ic('star')}See all reviews on Google</a></div></div></section>
 <section class="sec" style="padding-top:0" aria-label="Customer reviews"><div class="wrap rgrid">{cards}</div></section>
 <section class="sec snips" aria-labelledby="sn-h"><div class="wrap"><span class="eyebrow light rv">Highlights from more Google reviews</span><h2 class="sr-only" id="sn-h">Review highlights</h2><ul class="snip">{snip}</ul></div></section>
 {cta_band('Ready to be our next 5-star yard?')}
@@ -342,7 +342,7 @@ def contact():
 <button class="btn wood xl mag" type="submit">{ic('msg')}Open text message</button><p class="muted small">This opens your phone\u2019s messaging app with the details filled in. Nothing is sent until you hit send.</p></form>
 </div></section>
 <section class="sec faqs" aria-labelledby="fq-h"><div class="wrap faq-in"><div><span class="eyebrow rv">FAQ</span><h2 class="h2 split" id="fq-h"><span class="ln"><span>Good <em>questions.</em></span></span></h2></div><div class="faq-list">{faqh}</div></div></section>
-<section class="sec mapsec" aria-label="Map"><div class="wrap"><div class="map wide rv"><iframe title="Map of {e(NAME)} in Belleview, FL" src="https://www.google.com/maps?q={STREET.replace(' ','+')},+{CITY},+{REGION}+{ZIP}&amp;output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div></div></section>
+<section class="sec mapsec" aria-label="Map"><div class="wrap"><div class="map wide rv"><iframe title="Map of {e(NAME)} in Belleview, FL" src="https://maps.google.com/maps?q={STREET.replace(' ','+')},+{CITY},+{REGION}+{ZIP}&amp;z=12&amp;output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div></div></section>
 </main>{footer()}'''
     return body
 
